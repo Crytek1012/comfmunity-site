@@ -23,6 +23,8 @@ export default function Navbar() {
                     <Image
                         src="/noelle_comf.png"
                         alt="Logo"
+                        height={40}
+                        width={40}
                         className={navbarStyles.logo}
                         priority
                     />

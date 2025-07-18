@@ -1,5 +1,10 @@
 import styles from './page.module.css';
 
+export const metadata = {
+    title: 'Terms of Service - Comfmunity',
+    description: 'Comfmunity\'s Terms of Service',
+};
+
 export default function TermsOfServicePage() {
     return <div className={styles.pageWrapper}>
         <div className={styles.title}>

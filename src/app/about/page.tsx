@@ -1,5 +1,10 @@
 import styles from './page.module.css';
 
+export const metadata = {
+    title: 'About - Comfmunity',
+    description: 'Learn more about the Comfmunity network.',
+};
+
 export default function AboutPage() {
     return <div className={styles.pageWrapper}>
         <div className={styles.title}>

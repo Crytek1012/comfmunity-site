@@ -1,5 +1,10 @@
 import styles from './page.module.css';
 
+export const metadata = {
+    title: 'Privacy Policy - Comfmunity',
+    description: 'Comfmunity\'s Privacy Policy',
+};
+
 export default function PrivacyPolicyPage() {
     return <div className={styles.pageWrapper}>
         <div className={styles.title}>

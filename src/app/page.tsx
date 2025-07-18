@@ -1,5 +1,7 @@
 import styles from './page.module.css';
 import { database } from '@/lib/database';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default async function Page() {
   const db = await database();
@@ -32,6 +34,18 @@ export default async function Page() {
         <br /><br />
         Join our Discord server and contact our administrator, Red.
       </section>
+
+      <Link href='https://discord.gg/noelle' target='_blank' className={styles.inviteContainer}>
+        <Image
+          src="/discord_logo.webp"
+          alt="Discord"
+          height={100}
+          width={100}
+          className={styles.inviteLogo}
+          priority
+        />
+        <p>Join us</p>
+      </Link>
     </div>
 
   </div>;

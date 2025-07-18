@@ -41,6 +41,8 @@
     padding-bottom: 1rem;
     border-bottom: #3d4044 3px solid;
     text-align: center;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .banshareInfoWrapper section:last-child {

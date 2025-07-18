@@ -9,7 +9,7 @@ export const metadata = {
     title: 'Comfmunity',
     description: 'An inter-server chat created by the Noelle Mains Armoured-Goddess Discord server.',
     url: 'https://comfmunity.com/',
-    images: ['/images/noelle_comf.webp'],
+    images: ['/noelle_comf.png'],
   },
   metadataBase: 'https://comfmunity.com/'
 };
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/noelle_comf.png" />
+      <link rel="icon" href="/favicon.ico" />
       <body>
         <div className='wrapper'>
           <Navbar />

@@ -1,7 +1,13 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import styles from './banshare-form.module.css';
 import { useParams } from "next/navigation";
 import BanshareComponent from "./banshare";
+
+function validateId(id: string): string | null {
+    if (!/^\d+$/.test(id)) return 'A banshare ID cannot contain letters or symbols.';
+    if (id.length < 17 || id.length > 20) return 'A banshare ID has a minimum of 17 and maximum of 20 digits.';
+    return null;
+}
 
 export default function BanshareFormComponent() {
     const params = useParams();
@@ -13,20 +19,7 @@ export default function BanshareFormComponent() {
     const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState('');
 
-    useEffect(() => {
-        async function fetch() {
-            if (queryId) await fetchBanshare(queryId);
-        }
-        fetch();
-    });
-
-    function validateId(id: string): string | null {
-        if (!/^\d+$/.test(id)) return 'A banshare ID cannot contain letters or symbols.';
-        if (id.length < 17 || id.length > 20) return 'A banshare ID has a minimum of 17 and maximum of 20 digits.';
-        return null;
-    }
-
-    async function fetchBanshare(searchId: string) {
+    const fetchBanshare = useCallback(async (searchId: string) => {
         const validationError = validateId(searchId);
         if (validationError) {
             setBanshare(null);
@@ -52,7 +45,11 @@ export default function BanshareFormComponent() {
             setBanshare(data.data);
         }
         setLoading(false);
-    }
+    }, []);
+
+    useEffect(() => {
+        if (queryId) fetchBanshare(queryId);
+    }, [queryId, fetchBanshare]);
 
     async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();

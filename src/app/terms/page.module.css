@@ -12,7 +12,7 @@
 
 .pageWrapper {
     align-items: center;
-    padding: 3rem;
+    padding: 1rem 0;
     text-align: center;
     animation: 0.5s slideFromTop
 }
@@ -24,9 +24,9 @@
 }
 
 .description {
+    padding: 1rem 0;
     font-size: 1.2rem;
-    padding: 1rem;
-    width: 80%;
+    width: 90%;
     text-align: left;
     justify-self: center;
     opacity: 0.7;
@@ -43,8 +43,8 @@
 
 .section {
     text-align: left;
-    padding: 1rem;
-    width: 80%;
+    padding: 1rem 0;
+    width: 90%;
     justify-self: center;
 }
 
@@ -75,4 +75,32 @@
     font-size: 1.2rem;
     opacity: 0.7;
     line-height: 1.4;
+}
+
+/* Tablets */
+@media (min-width: 768px) {}
+
+/* Small laptops */
+@media (min-width: 1024px) {}
+
+/* Desktops */
+@media (min-width: 1280px) {
+
+    .pageWrapper {
+        padding: 3rem;
+    }
+
+    .description {
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .section {
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .infoWrapper {
+        width: 90%;
+    }
 }

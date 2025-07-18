@@ -1,0 +1,83 @@
+.banshare {
+    background-color: #222325;
+    width: 100%;
+    justify-self: center;
+    margin-top: 3rem;
+    border: #070505 5px solid;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+
+.id {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.status p {
+    margin-left: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: orange;
+}
+
+.banshareInfoWrapper {
+    padding: 1rem 0.5rem;
+    text-align: left;
+    justify-content: left;
+}
+
+.banshareInfoWrapper section {
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: #3d4044 3px solid;
+    text-align: center;
+}
+
+.banshareInfoWrapper section:last-child {
+    border-bottom: none;
+}
+
+.banshareInfoWrapper section p {
+    margin: 10px 0;
+    opacity: 0.7;
+}
+
+.banshareInfoWrapper section p a {
+    color: #e21679;
+}
+
+.banshareInfoWrapper section p a:hover {
+    text-decoration: underline;
+}
+
+/* Tablets */
+@media (min-width: 768px) {}
+
+/* Small laptops */
+@media (min-width: 1024px) {}
+
+/* Desktops */
+@media (min-width: 1280px) {
+    .banshare {
+        width: 60%;
+        padding: 1rem;
+    }
+
+    .banshareInfoWrapper {
+        padding: 1rem;
+    }
+
+    .banshareInfoWrapper section {
+        text-align: left;
+    }
+}

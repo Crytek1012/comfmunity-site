@@ -1,0 +1,113 @@
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #c54382;
+    padding: 1rem;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 40px;
+    border-radius: 50%;
+    width: auto;
+}
+
+.logoSpan:hover {
+    color: #c54382;
+    transition: .3s ease;
+}
+
+.menuToggle {
+    margin-left: auto;
+    font-size: 2.3rem;
+    cursor: pointer;
+    z-index: 10;
+    -webkit-tap-highlight-color: #44474d;
+}
+
+.navigationContainer {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #2C2F33;
+    border: 1px solid #c54382;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+    padding: 1rem 0;
+}
+
+.navigationContainer.open {
+    display: flex;
+}
+
+.navigationContainer a {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 1.5rem 0;
+    opacity: 0.7;
+}
+
+.navigationContainer a:hover {
+    opacity: 1;
+    color: #c54382;
+    background-color: #44474d;
+    transition: .3s ease;
+}
+
+.active {
+    opacity: 1 !important;
+    font-weight: bold;
+    color: #c54382;
+}
+
+/* Tablets */
+@media (min-width: 768px) {}
+
+/* Small laptops */
+@media (min-width: 1024px) {}
+
+/* Desktops */
+@media (min-width: 1280px) {
+
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .menuToggle {
+        display: none;
+    }
+
+    .navigationContainer {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        border: none;
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    .navigationContainer a {
+        margin-left: 1.5rem;
+        text-decoration: none;
+        opacity: 0.6;
+        font-size: 1.3rem;
+        padding: 1rem;
+        font-weight: 100;
+    }
+
+    .active {
+        color: #c54382;
+    }
+
+}

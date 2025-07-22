@@ -1,3 +1,4 @@
+import ConnectionsCount from '@/components/connections-count';
 import styles from './page.module.css';
 import { database } from '@/lib/database';
 import Image from 'next/image';
@@ -5,6 +6,7 @@ import Link from 'next/link';
 
 export default async function Page() {
   const db = await database();
+  const connectionSize = await db.connections.collection.countDocuments();
 
   return <div className={styles.pageWrapper}>
     <div className={styles.container}>
@@ -24,7 +26,7 @@ export default async function Page() {
       </div>
 
       <section className={styles.block}>
-        With {db.connections.cache.size} servers from communities like Genshin Impact, Honkai: Star Rail, Honkai Impact 3rd, Wuthering Waves, Zenless Zone Zero, and more!
+        With <ConnectionsCount count={connectionSize} /> servers from communities like Genshin Impact, Honkai: Star Rail, Honkai Impact 3rd, Wuthering Waves, Zenless Zone Zero, and more!
         <br /><br />
         As long as it features gacha-related content, it&apos;s comfy enough for us.
       </section>

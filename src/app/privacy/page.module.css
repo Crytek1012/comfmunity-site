@@ -1,0 +1,117 @@
+@keyframes slideFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pageWrapper {
+    align-items: center;
+    padding: 1rem 0;
+    text-align: center;
+    animation: 0.5s slideFromTop
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.description {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 90%;
+    text-align: left;
+    justify-self: center;
+}
+
+.description p {
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+.description a {
+    color: var(--link-color);
+}
+
+.description a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    padding: 1rem 0;
+    text-align: left;
+    padding: 1rem;
+    width: 90%;
+    justify-self: center;
+}
+
+.section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+.section p a {
+    color: var(--link-color);
+}
+
+.section p a:hover {
+    text-decoration: underline;
+}
+
+.section ol {
+    margin-left: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.section ul {
+    margin-left: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.section li {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+/* Tablets */
+@media (min-width: 768px) {}
+
+/* Small laptops */
+@media (min-width: 1024px) {}
+
+/* Desktops */
+@media (min-width: 1280px) {
+
+    .pageWrapper {
+        padding: 3rem;
+    }
+
+    .description {
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .section {
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .infoWrapper {
+        width: 90%;
+    }
+}

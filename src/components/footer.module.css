@@ -1,0 +1,37 @@
+.footer {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer a {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    opacity: 0.6;
+    margin: 1rem;
+    width: auto;
+}
+
+.footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Tablets */
+@media (min-width: 768px) {}
+
+/* Small laptops */
+@media (min-width: 1024px) {}
+
+/* Desktops */
+@media (min-width: 1280px) {
+    .footer {
+        padding: 2rem;
+    }
+
+    .footer a {
+        display: inline;
+        margin: 2rem;
+    }
+}

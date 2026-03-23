@@ -5,6 +5,7 @@
   --block-color: #000000;
   --discord-blue: rgb(95, 95, 250);
   --link-color: #fc69b0;
+  --navbar-link: #dbd9d9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +16,7 @@
     --block-color: rgba(255, 255, 255, 0.6);
     --discord-blue: rgb(28, 28, 173);
     --link-color: #e21679;
+    --navbar-link: #44474d;
   }
 }
 
